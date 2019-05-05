@@ -3,6 +3,7 @@ package de.beyondjava.selenium.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,8 +20,9 @@ public class Selenium2Example  {
         // Create a new instance of the Firefox driver
         // Notice that the remainder of the code relies on the interface, 
         // not the implementation.
-		// WebDriver driver = new FirefoxDriver();
-		WebDriver driver = DriverFactory.createIEDriverInstance();
+		 //WebDriver driver = new FirefoxDriver();
+		WebDriver driver = DriverFactory.createFirefoxInstance();
+//        WebDriver driver = DriverFactory.createIEDriverInstance();
 
         // And now use this to visit Google
         driver.get("http://www.google.com");
